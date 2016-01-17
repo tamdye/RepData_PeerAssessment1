@@ -38,15 +38,15 @@ First, calculate summary statistics.
 
 
 ```r
-meanSteps <- round(mean(sumActivityDay$sumSteps, na.rm=TRUE),0)
+meanSteps <- mean(sumActivityDay$sumSteps, na.rm=TRUE)
 ```
-*The mean number of steps is 9354.*
+*The mean number of steps is 9354.2295082.*
 
 
 ```r
-medianSteps <- round(median(sumActivityDay$sumSteps, na.rm=TRUE),0)
+medianSteps <- median(sumActivityDay$sumSteps, na.rm=TRUE)
 ```
-*The median number of steps is 1.0395\times 10^{4}.*
+*The median number of steps is 10395.*
 
 Then, summarize the data to average steps per interval:
 
@@ -78,7 +78,7 @@ The maximum number of steps is 206.1698113.
 ```r
 maxInterval <- sumActivityInterval[which(sumActivityInterval$meanSteps==maxSteps),"interval"]
 ```
-This maximum occurs in the 835th interval:
+This maximum occurs in interval number 835.
 
 ##Inputing Missing Values
 
@@ -129,7 +129,7 @@ newMedianSteps <- median(newSumActivityDay$sumSteps, na.rm=TRUE)
 ```
 *The median number of steps per day is 1.0766189\times 10^{4}.*
 
-The impact of imputing the missing data using the interval average is to increase the mean from 9354 to 1.0766189\times 10^{4} and the median from 1.0395\times 10^{4} to 1.0766189\times 10^{4}.
+The impact of imputing the missing data using the interval average is to increase the mean from 9354.2295082 to 1.0766189\times 10^{4} and the median from 10395 to 1.0766189\times 10^{4}.
 
 ##Are There Differences in Activity Levels between Weekends and Weekdays?
 
